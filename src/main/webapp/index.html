@@ -1,0 +1,47 @@
+<!-- 
+ *  Taller WEB
+ *   co-Author :::   Juan Albarracin
+ *   co-Author :::  Mario BolaÃ±os
+ *   co-Author ::: Sergio Orozco
+ *   co-Author :::  Brian Sterling
+ *     Program ::: Bases de Datos
+ *  Credential ::: SIST0008-G01:SIV
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <center>
+        <form name="login">
+            <label for="username">Nombre</label>
+            <br/>
+            <input type="text" name="userid"/>
+            <br/>
+            <label for="password">Contraseña</label>
+            <br/>
+            <input type="password" name="pswrd"/>
+            <br/>
+            <input type="button" onclick="check(this.form)" value="Ingresar"/>
+            <script language="javascript">
+                function check(form)/*function to check userid & password*/
+                {
+                    /*the following code checkes whether the entered userid and password are matching*/
+                    if (form.userid.value === "fabian" && form.pswrd.value === "bases")
+                    {
+                        window.open('login.jsp');/*opens the target page while Id & password matches*/
+                    } else
+                    {
+                        alert("Error Password or Username");/*displays error message*/
+                    }
+                }
+            </script>
+            <a href="#">
+                <p class="small">Olvido su Contraseña</p>
+                <p class="small">Contacte al Administrador del Servicio</p>
+            </a>
+        </center>
+    </body>
+</html>
