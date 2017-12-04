@@ -35,9 +35,8 @@ public class ApplicationDAO
         try
         {
             PreparedStatement preparedStatement = connection.prepareStatement("insert into application(name,description) values (?, ?)");
-            preparedStatement.setInt(1, user.getIdApplication());
-            preparedStatement.setString(2, user.getName());
-            preparedStatement.setString(3, user.getDescription());
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getDescription());
             preparedStatement.executeUpdate();
         }
         catch (SQLException e)
@@ -65,9 +64,8 @@ public class ApplicationDAO
         try 
         {
             PreparedStatement preparedStatement = connection.prepareStatement("update application set name=?, description=?" + "where idApplication=?");
-            preparedStatement.setInt(1, user.getIdApplication());
-            preparedStatement.setString(2, user.getName());
-            preparedStatement.setString(3, user.getDescription());
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getDescription());
             preparedStatement.executeUpdate();
         }
         catch (SQLException e)
@@ -83,7 +81,7 @@ public class ApplicationDAO
         {
             System.out.println("Llegue hasta aca");
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("select * from users");
+            ResultSet rs = statement.executeQuery("select * from application");
             
             while (rs.next())
             {
