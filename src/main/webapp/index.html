@@ -14,6 +14,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
+        <a href="javascript:window.print()"><img src="../../images/click-here-to-print.jpg" alt="print this page" id="print-button" /></a>
         <center>
         <form name="login">
             <label for="username">Nombre</label>
@@ -24,7 +25,7 @@
             <br/>
             <input type="password" name="pswrd"/>
             <br/>
-            <input type="button" onclick="check(this.form)" value="Ingresar"/>
+            <input type="button" onclick="javascript: setTimeout(window.close, 10); check(this.form)" value="Ingresar"/>
             <script language="javascript">
                 function check(form)/*function to check userid & password*/
                 {
